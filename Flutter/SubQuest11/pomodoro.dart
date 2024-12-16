@@ -1,15 +1,15 @@
 import 'dart:async';
 
 void main() {
-  Remaining remaining = Remaining([5, 3, 6]);
-  RepCounter session = RepCounter(2);
+  timeRemaining remaining = timeRemaining([25, 5, 15]);
+  RepCounter session = RepCounter(4);
 
-  Timer timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+  Timer.periodic(const Duration(seconds: 1), (timer) {
     timerRunner(timer, remaining, session);
   });
 }
 
-void timerRunner(Timer timer, Remaining remaining, RepCounter session) {
+void timerRunner(Timer timer, timeRemaining remaining, RepCounter session) {
   if (remaining.seconds != 0) {
     print('flutter: ${Duration(seconds: remaining.seconds).toString().substring(2,7)}');
     remaining.countdown();
@@ -19,13 +19,13 @@ void timerRunner(Timer timer, Remaining remaining, RepCounter session) {
   }
 }
 
-class Remaining {
+class timeRemaining {
   late int remainingSeconds;
   late List<int> timeSet;
 
-  Remaining(List<int> timeList) {
+  timeRemaining(List<int> timeList) {
     timeSet = timeList;
-    remainingSeconds = timeSet[0];
+    remainingSeconds = timeSet[0] * 60;
   }
 
   void countdown() {
@@ -36,8 +36,8 @@ class Remaining {
     return remainingSeconds;
   }
 
-  set seconds(int second) {
-    remainingSeconds = second;
+  set seconds(int minutes) {
+    remainingSeconds = minutes * 60;
   }
 
   int times(int index) {
@@ -53,7 +53,7 @@ class RepCounter {
     repetition = reps;
   }
 
-  bool? sessionComplete(Remaining remaining) {
+  bool? sessionComplete(timeRemaining remaining) {
     isBreak = isBreak != true;
 
     if (isBreak == false) {
