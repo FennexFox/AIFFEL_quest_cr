@@ -62,10 +62,10 @@ class AppContent extends StatelessWidget {
 }
 
 /**
-    디버깅 기록
-    - 
+디버깅 기록
+- Center 위젯을 const로 초기화한 뒤 그 child로 const가 아닌 widget을 호출하였을 때 문제가 발생한다.
 
-    회고
+회고
 
 - 강소안 : StatelessWidget으로 작성하게 되어 완성할 수 있었다. const로 사용미숙으로 debuggiing 과정이 있어
 - 박형호 : 코드의 전체적인 들이 어떤 형태를를 가지고 있는지는 이해했지만, 특정 위젯이 어떤 역할을 하고 어떠한 형태로 어디에 들어가야한다는 것에 대한 이해가 부족합니다.     
