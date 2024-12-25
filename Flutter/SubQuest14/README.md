@@ -21,7 +21,7 @@
 ![alt text](image-1.png)
 
 ## 프로토타이핑 (사용 툴 : Figma)
-[프로토타입](https://www.notion.so/modulabs/Flutter-04-58c0d8c3a0e84d0d8a29b66b738d5cbd?pvs=4#3e4377b36eb74eca9993035434dfee10)
+[프로토타입](https://www.figma.com/proto/awbTeTq6e6LmNL9kh82h7C/GetProductive?node-id=1-3&t=R7RaxaKWXVPq3wfd-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3)
 
 ## 페이지 구현
 1. SubQuest C 14.dart - 직접 페이지를 빌드하지는 않으며, 다른 페이지를 호출하는 역할을 합니다.
